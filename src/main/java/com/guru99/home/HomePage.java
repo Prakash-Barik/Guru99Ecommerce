@@ -3,17 +3,19 @@ package com.guru99.home;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class Guru99HomePage {
+public class HomePage {
 	WebDriver driver;
+	
 	@FindBy(xpath = "//a[contains(text(),'Mobile')]")
-	WebElement mobileLink;
+	WebElement mobileMenu;
 	
 	@FindBy(xpath = "//a[contains(text(),'TV')]")
-	WebElement tVlink;
+	WebElement tVlMenu;
 	
 	@FindBy(xpath = "//span[contains(text(),'Account')]")
-	WebElement accountLink;
+	WebElement accountMenu;
 	
 	@FindBy(xpath = "//span[contains(text(),'Cart')]")
 	WebElement cartLink;
@@ -30,6 +32,25 @@ public class Guru99HomePage {
 	@FindBy(xpath = "//p[contains(text(),'Default welcome msg! ')]")
 	WebElement welcomeMsg;
 	
+	public HomePage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
 	
+	public String verifyPageTitle() {
+		String pageTitle = driver.getTitle();
+		return pageTitle;
+	}
+	
+	public void clickOnMobileMenu() throws InterruptedException {
+		mobileMenu.click();
+		Thread.sleep(2000);
+	}
+	
+	public String verifyPageTitleAfterClickingMobile() {
+		String mobilePageTitle = driver.getTitle();
+		return mobilePageTitle;
+	}
 
 }
+
