@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Home page title verified..]]>
+    </line>
+    <line>
+      <![CDATA[Mobile page title verified..]]>
+    </line>
+    <line>
+      <![CDATA[Mobiles are sorted by Name...yet to verify.]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="20132" started-at="2019-10-05T07:48:54Z" finished-at="2019-10-05T07:49:15Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="20132" started-at="2019-10-05T07:48:54Z" finished-at="2019-10-05T07:49:15Z">
+      <class name="com.guru99.testCases.TestCase1">
+        <test-method status="PASS" signature="browserSetup()[pri:0, instance:com.guru99.testCases.TestCase1@26be92ad]" name="browserSetup" is-config="true" duration-ms="14468" started-at="2019-10-05T07:48:54Z" finished-at="2019-10-05T07:49:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.guru99.testCases.TestCase1@26be92ad]" name="testCase1" duration-ms="4818" started-at="2019-10-05T07:49:09Z" finished-at="2019-10-05T07:49:14Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Home page title verified..]]>
+            </line>
+            <line>
+              <![CDATA[Mobile page title verified..]]>
+            </line>
+            <line>
+              <![CDATA[Mobiles are sorted by Name...yet to verify.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testCase1 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99.testCases.TestCase1@26be92ad]" name="tearDown" is-config="true" duration-ms="811" started-at="2019-10-05T07:49:14Z" finished-at="2019-10-05T07:49:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.guru99.testCases.TestCase1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
