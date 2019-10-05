@@ -2,42 +2,48 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Home page title verified..]]>
+      <![CDATA[Clicked on the Mobile menu]]>
     </line>
     <line>
-      <![CDATA[Mobile page title verified..]]>
+      <![CDATA[Cost of Sony Experia on Home page is : $100.00]]>
     </line>
     <line>
-      <![CDATA[Mobiles are sorted by Name...yet to verify.]]>
+      <![CDATA[Cost of Sone Experia on Details page is : $100.00]]>
+    </line>
+    <line>
+      <![CDATA[Price of Sony Experia on Home page & Details is $100]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20132" started-at="2019-10-05T07:48:54Z" finished-at="2019-10-05T07:49:15Z">
+  <suite name="Default suite" duration-ms="24765" started-at="2019-10-05T10:06:02Z" finished-at="2019-10-05T10:06:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20132" started-at="2019-10-05T07:48:54Z" finished-at="2019-10-05T07:49:15Z">
-      <class name="com.guru99.testCases.TestCase1">
-        <test-method status="PASS" signature="browserSetup()[pri:0, instance:com.guru99.testCases.TestCase1@26be92ad]" name="browserSetup" is-config="true" duration-ms="14468" started-at="2019-10-05T07:48:54Z" finished-at="2019-10-05T07:49:09Z">
+    <test name="Default test" duration-ms="24765" started-at="2019-10-05T10:06:02Z" finished-at="2019-10-05T10:06:27Z">
+      <class name="com.guru99.testCases.TestCase2">
+        <test-method status="PASS" signature="setupBrowser()[pri:0, instance:com.guru99.testCases.TestCase2@26be92ad]" name="setupBrowser" is-config="true" duration-ms="15144" started-at="2019-10-05T10:06:02Z" finished-at="2019-10-05T10:06:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserSetup -->
-        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.guru99.testCases.TestCase1@26be92ad]" name="testCase1" duration-ms="4818" started-at="2019-10-05T07:49:09Z" finished-at="2019-10-05T07:49:14Z">
+        </test-method> <!-- setupBrowser -->
+        <test-method status="PASS" signature="testCase2()[pri:0, instance:com.guru99.testCases.TestCase2@26be92ad]" name="testCase2" duration-ms="8839" started-at="2019-10-05T10:06:17Z" finished-at="2019-10-05T10:06:26Z">
           <reporter-output>
             <line>
-              <![CDATA[Home page title verified..]]>
+              <![CDATA[Clicked on the Mobile menu]]>
             </line>
             <line>
-              <![CDATA[Mobile page title verified..]]>
+              <![CDATA[Cost of Sony Experia on Home page is : $100.00]]>
             </line>
             <line>
-              <![CDATA[Mobiles are sorted by Name...yet to verify.]]>
+              <![CDATA[Cost of Sone Experia on Details page is : $100.00]]>
+            </line>
+            <line>
+              <![CDATA[Price of Sony Experia on Home page & Details is $100]]>
             </line>
           </reporter-output>
-        </test-method> <!-- testCase1 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99.testCases.TestCase1@26be92ad]" name="tearDown" is-config="true" duration-ms="811" started-at="2019-10-05T07:49:14Z" finished-at="2019-10-05T07:49:15Z">
+        </test-method> <!-- testCase2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99.testCases.TestCase2@26be92ad]" name="tearDown" is-config="true" duration-ms="751" started-at="2019-10-05T10:06:26Z" finished-at="2019-10-05T10:06:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.guru99.testCases.TestCase1 -->
+      </class> <!-- com.guru99.testCases.TestCase2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

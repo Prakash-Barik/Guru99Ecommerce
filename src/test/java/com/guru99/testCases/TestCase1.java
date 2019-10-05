@@ -23,7 +23,7 @@ public class TestCase1 {
 	 */
 	WebDriver driver;
 	HomePage objhp;
-	MobilePage objMob;
+	MobilePage objmob;
 	String baseUrl = "http://live.guru99.com/index.php/";
 	
 	@BeforeClass
@@ -45,8 +45,8 @@ public class TestCase1 {
 		objhp.clickOnMobileMenu();
 		Assert.assertEquals(objhp.verifyPageTitleAfterClickingMobile(), "Mobile");
 		Reporter.log("Mobile page title verified..", true);
-		objMob = new MobilePage(driver);
-		objMob.sortMobileByName();
+		objmob = new MobilePage(driver);
+		objmob.sortMobileByName();
 		Reporter.log("Mobiles are sorted by Name...yet to verify.", true);
 	}
 	

@@ -21,6 +21,11 @@ public class MobilePage {
 	@FindBy(id = "product-collection-image-1")
 	WebElement xperia;
 	
+	@FindBy(xpath = "//span[contains(text(),'$100.00')]")
+	WebElement xperiaPrice;
+	
+	
+	
 	public MobilePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -35,9 +40,21 @@ public class MobilePage {
 		ArrayList<String> obtainedList = new ArrayList<>();
 		//driver.findElements(by)
 		
-		
-		
-		
 	}
-
+	
+	public String readCostOfXperiaOnHomePage() {
+		String price = xperiaPrice.getText();
+		System.out.println("The cost of sony experia is : "+ price);
+		return price;
+	}
+	
+	public void clickOnSonyExperia() {
+		xperia.click();
+	}
+	
+	public String readDetailsPriceOfXperia() {
+		WebElement priceDetails = driver.findElement(By.xpath("//span[contains(text(),'$100.00')]"));
+		String priceDeatilsText = priceDetails.getText();
+		return priceDeatilsText;
+	}
 }
