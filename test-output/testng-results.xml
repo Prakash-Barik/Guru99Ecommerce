@@ -2,48 +2,54 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[Clicked on the Mobile menu]]>
+      <![CDATA[Clicked on Mobile menu from the Home page]]>
     </line>
     <line>
-      <![CDATA[Cost of Sony Experia on Home page is : $100.00]]>
+      <![CDATA[Sony Experia added to the Cart..]]>
     </line>
     <line>
-      <![CDATA[Cost of Sone Experia on Details page is : $100.00]]>
+      <![CDATA[Updated the quantity value to 1000.]]>
     </line>
     <line>
-      <![CDATA[Price of Sony Experia on Home page & Details is $100]]>
+      <![CDATA[Clicked on empty cart link]]>
+    </line>
+    <line>
+      <![CDATA[Verified cart is empty]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24765" started-at="2019-10-05T10:06:02Z" finished-at="2019-10-05T10:06:27Z">
+  <suite name="Default suite" duration-ms="26942" started-at="2019-10-05T11:36:31Z" finished-at="2019-10-05T11:36:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24765" started-at="2019-10-05T10:06:02Z" finished-at="2019-10-05T10:06:27Z">
-      <class name="com.guru99.testCases.TestCase2">
-        <test-method status="PASS" signature="setupBrowser()[pri:0, instance:com.guru99.testCases.TestCase2@26be92ad]" name="setupBrowser" is-config="true" duration-ms="15144" started-at="2019-10-05T10:06:02Z" finished-at="2019-10-05T10:06:17Z">
+    <test name="Default test" duration-ms="26942" started-at="2019-10-05T11:36:31Z" finished-at="2019-10-05T11:36:57Z">
+      <class name="com.guru99.testCases.TestCase3">
+        <test-method status="PASS" signature="setupBrowser()[pri:0, instance:com.guru99.testCases.TestCase3@26be92ad]" name="setupBrowser" is-config="true" duration-ms="14522" started-at="2019-10-05T11:36:31Z" finished-at="2019-10-05T11:36:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method status="PASS" signature="testCase2()[pri:0, instance:com.guru99.testCases.TestCase2@26be92ad]" name="testCase2" duration-ms="8839" started-at="2019-10-05T10:06:17Z" finished-at="2019-10-05T10:06:26Z">
+        <test-method status="PASS" signature="testCase3()[pri:0, instance:com.guru99.testCases.TestCase3@26be92ad]" name="testCase3" duration-ms="11655" started-at="2019-10-05T11:36:45Z" finished-at="2019-10-05T11:36:57Z">
           <reporter-output>
             <line>
-              <![CDATA[Clicked on the Mobile menu]]>
+              <![CDATA[Clicked on Mobile menu from the Home page]]>
             </line>
             <line>
-              <![CDATA[Cost of Sony Experia on Home page is : $100.00]]>
+              <![CDATA[Sony Experia added to the Cart..]]>
             </line>
             <line>
-              <![CDATA[Cost of Sone Experia on Details page is : $100.00]]>
+              <![CDATA[Updated the quantity value to 1000.]]>
             </line>
             <line>
-              <![CDATA[Price of Sony Experia on Home page & Details is $100]]>
+              <![CDATA[Clicked on empty cart link]]>
+            </line>
+            <line>
+              <![CDATA[Verified cart is empty]]>
             </line>
           </reporter-output>
-        </test-method> <!-- testCase2 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99.testCases.TestCase2@26be92ad]" name="tearDown" is-config="true" duration-ms="751" started-at="2019-10-05T10:06:26Z" finished-at="2019-10-05T10:06:27Z">
+        </test-method> <!-- testCase3 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99.testCases.TestCase3@26be92ad]" name="tearDown" is-config="true" duration-ms="739" started-at="2019-10-05T11:36:57Z" finished-at="2019-10-05T11:36:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.guru99.testCases.TestCase2 -->
+      </class> <!-- com.guru99.testCases.TestCase3 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

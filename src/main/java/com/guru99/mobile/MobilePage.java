@@ -1,7 +1,5 @@
 package com.guru99.mobile;
 
-import java.util.ArrayList;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +22,23 @@ public class MobilePage {
 	@FindBy(xpath = "//span[contains(text(),'$100.00')]")
 	WebElement xperiaPrice;
 	
+	@FindBy(xpath = "(//span[contains(text(),'Add to Cart')])[1]")
+	WebElement xperiaAddtocart;
+	
+	@FindBy(xpath = "(//input[@type='text'])[1]")
+	WebElement qtyField;
+	
+	@FindBy(xpath = "(//span[contains(text(),'Update')])[3]")
+	WebElement updateBtn;
+	
+	@FindBy(xpath = "//p[@class='item-msg error']")
+	WebElement errorMsg;
+	
+	@FindBy(xpath = "//span[contains(text(),'Empty Cart')]")
+	WebElement emptycartLink;
+	
+	@FindBy(xpath = "//h1[contains(text(),'Shopping Cart is Empty')]")
+	WebElement shoppingcartemptyMessage;
 	
 	
 	public MobilePage(WebDriver driver) {
@@ -37,7 +52,7 @@ public class MobilePage {
 	}
 	
 	public void verifyAllProductsSortedByName() {
-		ArrayList<String> obtainedList = new ArrayList<>();
+		//ArrayList<String> obtainedList = new ArrayList<>();
 		//driver.findElements(by)
 		
 	}
@@ -57,4 +72,31 @@ public class MobilePage {
 		String priceDeatilsText = priceDetails.getText();
 		return priceDeatilsText;
 	}
+	
+	public void addCart2Xperia() throws InterruptedException {
+		xperiaAddtocart.click();
+		Thread.sleep(2000);
+	}
+	
+	public void enterQtyAndUpdate(String qty){
+		qtyField.sendKeys(qty);
+		updateBtn.click();
+	}
+	
+	public String verifyErrorMessage() {
+		String errormsg = errorMsg.getText();
+		return errormsg;
+	}
+	
+	public void clickEmptycartLink() {
+		emptycartLink.click();
+	}
+	
+	public boolean verifyShoppingcartemptyMessage() {
+		return shoppingcartemptyMessage.isDisplayed();
+	}
+	
+	
+	
+	
 }

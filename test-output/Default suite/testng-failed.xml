@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.guru99.testCases.TestCase1">
+      <class name="com.guru99.testCases.TestCase3">
         <methods>
-          <include name="browserSetup"/>
           <include name="tearDown"/>
-          <include name="testCase1"/>
+          <include name="testCase3"/>
+          <include name="setupBrowser"/>
         </methods>
-      </class> <!-- com.guru99.testCases.TestCase1 -->
+      </class> <!-- com.guru99.testCases.TestCase3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
