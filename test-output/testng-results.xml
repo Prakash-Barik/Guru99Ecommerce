@@ -1,55 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
     <line>
-      <![CDATA[Clicked on Mobile menu from the Home page]]>
+      <![CDATA[Clicked on the Mobile menu]]>
     </line>
     <line>
-      <![CDATA[Sony Experia added to the Cart..]]>
+      <![CDATA[Xperia added to the compare list]]>
     </line>
     <line>
-      <![CDATA[Updated the quantity value to 1000.]]>
+      <![CDATA[Iphone added to the compare list]]>
     </line>
     <line>
-      <![CDATA[Clicked on empty cart link]]>
-    </line>
-    <line>
-      <![CDATA[Verified cart is empty]]>
+      <![CDATA[Clicked on compare button after adding the products to compare list.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26942" started-at="2019-10-05T11:36:31Z" finished-at="2019-10-05T11:36:57Z">
+  <suite name="Default suite" duration-ms="58590" started-at="2019-10-06T12:48:27Z" finished-at="2019-10-06T12:49:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26942" started-at="2019-10-05T11:36:31Z" finished-at="2019-10-05T11:36:57Z">
-      <class name="com.guru99.testCases.TestCase3">
-        <test-method status="PASS" signature="setupBrowser()[pri:0, instance:com.guru99.testCases.TestCase3@26be92ad]" name="setupBrowser" is-config="true" duration-ms="14522" started-at="2019-10-05T11:36:31Z" finished-at="2019-10-05T11:36:45Z">
+    <test name="Default test" duration-ms="58590" started-at="2019-10-06T12:48:27Z" finished-at="2019-10-06T12:49:26Z">
+      <class name="com.guru99.testCases.TestCase4">
+        <test-method status="PASS" signature="setupBrowser()[pri:0, instance:com.guru99.testCases.TestCase4@66a3ffec]" name="setupBrowser" is-config="true" duration-ms="14253" started-at="2019-10-06T12:48:27Z" finished-at="2019-10-06T12:48:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupBrowser -->
-        <test-method status="PASS" signature="testCase3()[pri:0, instance:com.guru99.testCases.TestCase3@26be92ad]" name="testCase3" duration-ms="11655" started-at="2019-10-05T11:36:45Z" finished-at="2019-10-05T11:36:57Z">
+        <test-method status="FAIL" signature="testCase4()[pri:0, instance:com.guru99.testCases.TestCase4@66a3ffec]" name="testCase4" duration-ms="43529" started-at="2019-10-06T12:48:41Z" finished-at="2019-10-06T12:49:25Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //img[@src='http://live.guru99.com/media/catalog/product/cache/1/small_image/125x125/9df78eab33525d08d6e5fb8d27136e95/x/p/xperia.jpg']' (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //img[@src='http://live.guru99.com/media/catalog/product/cache/1/small_image/125x125/9df78eab33525d08d6e5fb8d27136e95/x/p/xperia.jpg']' (tried for 20 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.guru99.mobile.MobilePage.reflectedXperia(MobilePage.java:137)
+at com.guru99.mobile.MobilePage.verifyPopupAndCheckReflectedProducts(MobilePage.java:162)
+at com.guru99.testCases.TestCase4.testCase4(TestCase4.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@src='http://live.guru99.com/media/catalog/product/cache/1/small_image/125x125/9df78eab33525d08d6e5fb8d27136e95/x/p/xperia.jpg']"}
+  (Session info: chrome=77.0.3865.90)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-EDPB3UL', ip: '192.168.100.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\share\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55210}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1cd5d1b1dba3095ddc2a4ce263ced29d
+*** Element info: {Using=xpath, value=//img[@src='http://live.guru99.com/media/catalog/product/cache/1/small_image/125x125/9df78eab33525d08d6e5fb8d27136e95/x/p/xperia.jpg']}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy9.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 28 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
             <line>
-              <![CDATA[Clicked on Mobile menu from the Home page]]>
+              <![CDATA[Clicked on the Mobile menu]]>
             </line>
             <line>
-              <![CDATA[Sony Experia added to the Cart..]]>
+              <![CDATA[Xperia added to the compare list]]>
             </line>
             <line>
-              <![CDATA[Updated the quantity value to 1000.]]>
+              <![CDATA[Iphone added to the compare list]]>
             </line>
             <line>
-              <![CDATA[Clicked on empty cart link]]>
-            </line>
-            <line>
-              <![CDATA[Verified cart is empty]]>
+              <![CDATA[Clicked on compare button after adding the products to compare list.]]>
             </line>
           </reporter-output>
-        </test-method> <!-- testCase3 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99.testCases.TestCase3@26be92ad]" name="tearDown" is-config="true" duration-ms="739" started-at="2019-10-05T11:36:57Z" finished-at="2019-10-05T11:36:57Z">
+        </test-method> <!-- testCase4 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99.testCases.TestCase4@66a3ffec]" name="tearDown" is-config="true" duration-ms="761" started-at="2019-10-06T12:49:25Z" finished-at="2019-10-06T12:49:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.guru99.testCases.TestCase3 -->
+      </class> <!-- com.guru99.testCases.TestCase4 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -57,7 +57,7 @@ public class TestCase3 {
 
     @AfterClass
     public void tearDown() {
-    	driver.quit();;
+    	driver.quit();
     }
 }
 

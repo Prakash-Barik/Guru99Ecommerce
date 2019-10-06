@@ -1,11 +1,16 @@
 package com.guru99.mobile;
 
+import java.util.Iterator;
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MobilePage {
 	WebDriver driver;
@@ -39,6 +44,24 @@ public class MobilePage {
 	
 	@FindBy(xpath = "//h1[contains(text(),'Shopping Cart is Empty')]")
 	WebElement shoppingcartemptyMessage;
+	
+	@FindBy(xpath = "(//a[contains(text(),'Add to Compare')])[1]")
+	WebElement addToCompareXperia;
+	
+	@FindBy(xpath = "(//a[contains(text(),'Add to Compare')])[2]")
+	WebElement addToCompareIphone;
+	
+	@FindBy(xpath = "(//span[contains(text(),'Compare')])[2]")
+	WebElement compareBtn;
+	
+	@FindBy(xpath = "//img[@src=\'http://live.guru99.com/media/catalog/product/cache/1/small_image/125x125/9df78eab33525d08d6e5fb8d27136e95/x/p/xperia.jpg\']")
+	WebElement reflectedXperiaImg;
+	
+	@FindBy(xpath = "//img[@src=\"http://live.guru99.com/media/catalog/product/cache/1/small_image/125x125/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone.png\"]")
+	WebElement reflectedIphoneImg;
+	
+	@FindBy(xpath = "//span[contains(text(),'Close Window')]")
+	WebElement closeWindowBtn;
 	
 	
 	public MobilePage(WebDriver driver) {
@@ -96,7 +119,56 @@ public class MobilePage {
 		return shoppingcartemptyMessage.isDisplayed();
 	}
 	
+	public void addToCompareXperia() throws InterruptedException {
+		addToCompareXperia.click();
+		Thread.sleep(2000);
+	}
 	
+	public void addToCompareIphone() {
+		addToCompareIphone.click();
+	}
 	
+	public void clickCompareButton() {
+		compareBtn.click();
+	}
 	
+	public boolean reflectedXperia(WebDriver driver, long time) {
+		WebDriverWait wait = new WebDriverWait(driver, time);
+		wait.until(ExpectedConditions.visibilityOf(reflectedXperiaImg));
+				
+		return reflectedXperiaImg.isDisplayed();	
+	}
+	
+	public boolean reflectedIphone(WebDriver driver, long time) {
+		WebDriverWait wait = new WebDriverWait(driver, time);
+		wait.until(ExpectedConditions.visibilityOf(reflectedIphoneImg));
+		
+		return reflectedIphoneImg.isDisplayed();
+	}
+	
+	public void verifyPopupAndCheckReflectedProducts(WebDriver driver, long time) {
+		String mainWindow = driver.getWindowHandle();
+		
+		//to handle all new opened windows. 
+		Set<String> s1=driver.getWindowHandles();
+		Iterator<String> i1 = s1.iterator();
+		
+		while(i1.hasNext()) {
+			String childWindow = i1.next();
+			
+			if(!mainWindow.equalsIgnoreCase(childWindow)) 
+			{
+				driver.switchTo().window(childWindow);
+				if(reflectedXperia(driver, time) == true && reflectedIphone(driver, time) == true)
+				{
+					System.out.println("Both the products are reflected on the window..");
+				}	
+			}
+		}
+	} 
+	
+	public void clickCloseWindowButton() {
+		closeWindowBtn.click();
+	}
 }
+
