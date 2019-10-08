@@ -32,6 +32,10 @@ public class HomePage {
 	@FindBy(xpath = "//p[contains(text(),'Default welcome msg! ')]")
 	WebElement welcomeMsg;
 	
+	@FindBy(xpath = "(//a[contains(text(),'My Account')])[2]")
+	WebElement myaccountLink;
+	
+	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -50,6 +54,10 @@ public class HomePage {
 	public String verifyPageTitleAfterClickingMobile() {
 		String mobilePageTitle = driver.getTitle();
 		return mobilePageTitle;
+	}
+	
+	public void clickMyAccountLink() {
+		myaccountLink.click();
 	}
 
 }
