@@ -5,7 +5,7 @@
     <classes>
       <class name="com.guru99.testCases.TestCase4">
         <methods>
-          <include name="setupBrowser"/>
+          <include name="browserSetup"/>
           <include name="testCase4"/>
           <include name="tearDown"/>
         </methods>

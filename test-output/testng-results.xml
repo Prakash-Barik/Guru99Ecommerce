@@ -14,16 +14,16 @@
       <![CDATA[Clicked on compare button after adding the products to compare list.]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="58590" started-at="2019-10-06T12:48:27Z" finished-at="2019-10-06T12:49:26Z">
+  <suite name="Default suite" duration-ms="68522" started-at="2019-10-08T15:32:33Z" finished-at="2019-10-08T15:33:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="58590" started-at="2019-10-06T12:48:27Z" finished-at="2019-10-06T12:49:26Z">
+    <test name="Default test" duration-ms="68522" started-at="2019-10-08T15:32:33Z" finished-at="2019-10-08T15:33:41Z">
       <class name="com.guru99.testCases.TestCase4">
-        <test-method status="PASS" signature="setupBrowser()[pri:0, instance:com.guru99.testCases.TestCase4@66a3ffec]" name="setupBrowser" is-config="true" duration-ms="14253" started-at="2019-10-06T12:48:27Z" finished-at="2019-10-06T12:48:41Z">
+        <test-method status="PASS" signature="browserSetup()[pri:0, instance:com.guru99.testCases.TestCase4@1e88b3c]" name="browserSetup" is-config="true" duration-ms="17517" started-at="2019-10-08T15:32:33Z" finished-at="2019-10-08T15:32:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupBrowser -->
-        <test-method status="FAIL" signature="testCase4()[pri:0, instance:com.guru99.testCases.TestCase4@66a3ffec]" name="testCase4" duration-ms="43529" started-at="2019-10-06T12:48:41Z" finished-at="2019-10-06T12:49:25Z">
+        </test-method> <!-- browserSetup -->
+        <test-method status="FAIL" signature="testCase4()[pri:0, instance:com.guru99.testCases.TestCase4@1e88b3c]" name="testCase4" duration-ms="50150" started-at="2019-10-08T15:32:50Z" finished-at="2019-10-08T15:33:41Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //img[@src='http://live.guru99.com/media/catalog/product/cache/1/small_image/125x125/9df78eab33525d08d6e5fb8d27136e95/x/p/xperia.jpg']' (tried for 20 second(s) with 500 milliseconds interval)]]>
@@ -34,7 +34,7 @@ at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.j
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at com.guru99.mobile.MobilePage.reflectedXperia(MobilePage.java:137)
 at com.guru99.mobile.MobilePage.verifyPopupAndCheckReflectedProducts(MobilePage.java:162)
-at com.guru99.testCases.TestCase4.testCase4(TestCase4.java:49)
+at com.guru99.testCases.TestCase4.testCase4(TestCase4.java:46)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -64,10 +64,10 @@ Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable t
   (Session info: chrome=77.0.3865.90)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-EDPB3UL', ip: '192.168.100.8', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+System info: host: 'DESKTOP-EDPB3UL', ip: '192.168.43.188', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\share\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55210}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1cd5d1b1dba3095ddc2a4ce263ced29d
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\share\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 23806d12391d7c06b733470bc0ea15cb
 *** Element info: {Using=xpath, value=//img[@src='http://live.guru99.com/media/catalog/product/cache/1/small_image/125x125/9df78eab33525d08d6e5fb8d27136e95/x/p/xperia.jpg']}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -110,7 +110,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
             </line>
           </reporter-output>
         </test-method> <!-- testCase4 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99.testCases.TestCase4@66a3ffec]" name="tearDown" is-config="true" duration-ms="761" started-at="2019-10-06T12:49:25Z" finished-at="2019-10-06T12:49:26Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.guru99.testCases.TestCase4@1e88b3c]" name="tearDown" is-config="true" duration-ms="793" started-at="2019-10-08T15:33:41Z" finished-at="2019-10-08T15:33:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
