@@ -44,6 +44,15 @@ public class AccountPage {
 	@FindBy(css = "//input[type='checkbox']")
 	WebElement signupNewsletterChkbox;
 	
+	@FindBy(className = "back-link")
+	WebElement backLink;
+	
+	@FindBy(xpath = "//span[contains(text(),'Register')]")
+	WebElement registerBtn;
+	
+	@FindBy(css = "div.validation-advice")
+	WebElement emailRequiredError;
+	
 	public AccountPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -58,8 +67,62 @@ public class AccountPage {
 		firstnameTxtField.sendKeys(fName);
 	}
 	
+	public void enterMiddleName(String mName) {
+		middleNameTxtField.clear();
+		middleNameTxtField.sendKeys(mName);
+	}
 	
+	public void enterLastName(String lName) {
+		lastNameTextField.clear();
+		lastNameTextField.sendKeys(lName);
+	}
 	
+	public void enterEmailAddress(String email) {
+		emailAddressField.clear();
+		emailAddressField.sendKeys(email);
+	}
 	
-
+	public void enterPassword(String pswd) {
+		passwordField.clear();
+		passwordField.sendKeys(pswd);
+	}
+	
+	public void confirmPassword(String confPswd) {
+		confirmPasswordField.clear();
+		confirmPasswordField.sendKeys(confPswd);
+	}
+	
+	public void signupForNewsletter() {
+		signupNewsletterChkbox.click();
+	}
+	
+	public void clickRegisterButton() {
+		registerBtn.click();
+	}
+	
+    public String verifyRegistrationWithoutEmail() {
+    	String requiredErrorMsg = emailRequiredError.getText();
+		return requiredErrorMsg;
+	}
+	
+	public void registerWithoutEmailId(String fName, String mName, String lName, String pswd, String confPswd) {
+		enterFirstName(fName);
+		enterMiddleName(mName);
+		enterLastName(lName);
+		enterPassword(pswd);
+		confirmPassword(confPswd);
+		clickRegisterButton();
+	}
+	
+	public void registerWithEmailId(String fName, String mName, String lName, String email, String pswd, String confPswd) {
+		enterFirstName(fName);
+		enterMiddleName(mName);
+		enterLastName(lName);
+		enterEmailAddress(email);
+		enterPassword(pswd);
+		confirmPassword(confPswd);
+		signupForNewsletter();
+		clickRegisterButton();
+	}
+	
 }
