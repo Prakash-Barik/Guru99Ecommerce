@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Guru99Ecommerce TestCases(failed)" parallel="tests">
+    <classes>
+      <class name="com.guru99.testCases.TestCase5">
+        <methods>
+          <include name="browserSetup"/>
+          <include name="testCase5_createUserWithEmail" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.guru99.testCases.TestCase5 -->
+      <class name="com.guru99.testCases.TestCase4">
+        <methods>
+          <include name="browserSetup"/>
+          <include name="testCase4"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.guru99.testCases.TestCase4 -->
+      <class name="com.guru99.testCases.TestCase3">
+        <methods>
+          <include name="browserSetup"/>
+          <include name="testCase3"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.guru99.testCases.TestCase3 -->
+    </classes>
+  </test> <!-- Guru99Ecommerce TestCases(failed) -->
+</suite> <!-- Failed suite [Suite] -->
