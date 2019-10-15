@@ -1,2 +1,5 @@
 #GRADLE
 .gradle
+
+#Settings
+.settings
