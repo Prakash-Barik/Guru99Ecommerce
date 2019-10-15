@@ -41,7 +41,7 @@ public class AccountPage {
 	@FindBy(id = "confirmation")
 	WebElement confirmPasswordField;
 	
-	@FindBy(css = "//input[type='checkbox']")
+	@FindBy(css = "[type='checkbox']")
 	WebElement signupNewsletterChkbox;
 	
 	@FindBy(className = "back-link")
@@ -49,6 +49,9 @@ public class AccountPage {
 	
 	@FindBy(xpath = "//span[contains(text(),'Register')]")
 	WebElement registerBtn;
+	
+	@FindBy(xpath = "//span[contains(text(),'Thank you for registering with Main Website Store.')]")
+	WebElement registrationSuccessMsg;
 	
 	@FindBy(css = "div.validation-advice")
 	WebElement emailRequiredError;
@@ -100,11 +103,6 @@ public class AccountPage {
 		registerBtn.click();
 	}
 	
-    public String verifyRegistrationWithoutEmail() {
-    	String requiredErrorMsg = emailRequiredError.getText();
-		return requiredErrorMsg;
-	}
-	
 	public void registerWithoutEmailId(String fName, String mName, String lName, String pswd, String confPswd) {
 		enterFirstName(fName);
 		enterMiddleName(mName);
@@ -113,6 +111,12 @@ public class AccountPage {
 		confirmPassword(confPswd);
 		clickRegisterButton();
 	}
+	
+	public String verifyRegistrationMessageWithoutEmail() {
+    	String requiredErrorMsg = emailRequiredError.getText();
+		return requiredErrorMsg;
+	}
+    
 	
 	public void registerWithEmailId(String fName, String mName, String lName, String email, String pswd, String confPswd) {
 		enterFirstName(fName);
@@ -125,4 +129,10 @@ public class AccountPage {
 		clickRegisterButton();
 	}
 	
+	 public String verifyRegistrationWithEmail() {
+	    	String registrationSuccessMessage = registrationSuccessMsg.getText();
+	    	return registrationSuccessMessage;
+	    }
 }
+
+

@@ -77,6 +77,7 @@ public class MobilePage {
 	public void verifyAllProductsSortedByName() {
 		//ArrayList<String> obtainedList = new ArrayList<>();
 		//driver.findElements(by)
+		//Another option is to take the screenshot of the page and verify the sort order.
 		
 	}
 	

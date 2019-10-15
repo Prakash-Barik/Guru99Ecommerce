@@ -59,6 +59,12 @@ public class HomePage {
 	public void clickMyAccountLink() {
 		myaccountLink.click();
 	}
+	
+	public void clickOnTVmenu() throws InterruptedException {
+		tVlMenu.click();
+		Thread.sleep(2000);
+	}
 
 }
+
 
