@@ -11,10 +11,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class Screenshots {
-	String filePath = "E:\\workspace\\Guru99Ecommerce\\Screenshot\\";
-	WebDriver driver;
+	static String filePath = "E:\\workspace\\Guru99Ecommerce\\Screenshot\\";
+	static WebDriver driver;
 	
-	public void takeScreenshot() {
+	public static void takeScreenshot() {
 		TakesScreenshot scr = ((TakesScreenshot)driver);
 		File srcFile = scr.getScreenshotAs(OutputType.FILE);
 		String timeStamp = new SimpleDateFormat("dd_MM_yyyy__hh_mm_ss").format(new Date());
